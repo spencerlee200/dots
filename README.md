@@ -1,7 +1,7 @@
 # Deploying projects with codeship
 ## Prerequisites
 * You must have [git](https://git-scm.com/downloads) and [xcode](https://developer.apple.com/xcode/) installed
-* You must have a [Ubuntu 16.04.02](https://github.com/spencerlee200/static-sites-pipeline/blob/master/setup.md) server set up
+* You must have a [Ubuntu 16.04.02](https://github.com/spencerlee200/dots/blob/master/setup.md) server set up
 
 ## 1. Setting up your local repo
 Lets get the easy part out of the way. Navigate to the folder where you want to keep your local files and clone down your git repository. If you don't already have a git repository go create one making sure to initialise it with a readme.md file and clone it down with into your desired folder. Go ahead and cd into that project folder 
@@ -70,7 +70,7 @@ git push origin release
 git checkout -b dev
 ```
 
-Next drop in any files you want to upload into the folder and add your files to the git stage.
+Next drop in any files you want to upload into the folder and add your files to the git stage. Download or copy my deploy.sh file from my repo into your local sites root directory. Then run it with the line below:
 
 ```shell
 bash deploy.sh
