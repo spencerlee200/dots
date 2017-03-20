@@ -132,6 +132,13 @@ sudo systemctl reload nginx
 
 And thats all you have to do to add a subdomain. If you wanted to edit the landing page all you need to do it edit the default nginx page with `sudo nano /var/www/html/index.nginx-debian.html` or you could just create your own with `sudo nano /var/www/html/index.html` and delete the old one with `sudo rm /var/www/index.nginx-debian.html`.
 
+You may want to create a new user that just has control over uploading and editing your project. To do this all you have to do is create a new user and assign them nginx `www-data` permissions with their projects name.
+
+```shell
+adduser <project name>
+sudo chown -R <project name>:www-data /var/www/html/<project name>
+```
+
 ## Deploying your project
 Now that you have your server set up I am sure you are excited to push your website live. To do that follow my deployment guide [here](https://github.com/spencerlee200/dots). 
 
